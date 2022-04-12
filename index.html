@@ -12,21 +12,27 @@
                 font-family: Arial, Helvetica, sans-serif;
                 box-sizing: border-box;
             }
-        </style>
-        <script>
-            // This is important, because our static page is loading so fast
-            // We need a little timeout for this
-            // To make sure that our bundle code is loaded after tampermonkey code
-            function loadScript() {
-                const holder = document.querySelector(".script-holder");
-                const script = document.createElement("script");
-                script.src = "index.js";
-                holder.appendChild(script);
+
+            body {
+                margin: 0;
+                background: wheat;
             }
-            setTimeout(loadScript, 1000);
-        </script>
+
+            .green {
+                color: #56ff47;
+            }
+          
+            .yellow {
+                color: #ffdd47;
+            }
+        </style>
     </head>
     <body>
-        <div class="script-holder"></div>
+
+        <!-- Script holder, a place where you will store all of your script tags -->
+        <!-- It can be anything, maybe the last html element -->
+        <div class="script-holder">
+          <script src="index.js"></script>
+        </div>
     </body>
 </html>
