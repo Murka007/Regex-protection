@@ -5,7 +5,7 @@ A practical example of how to protect your `<script>` element and bypass its pro
 
   With its help, user can intercept your script element and by fetching the src create a new modified code on the page.
   
-  This method is called as code replacement (regular expression hooks)
+  This method is called as a code replacement (regular expression hooks)
   
   How to test userscript
   ---------------
