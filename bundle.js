@@ -28,7 +28,7 @@ function START() {
             if (script[type] !== "" || script[type].length) return false;
         }
 
-        // Check if setters exist
+        // Check if getters/setters exist
         const d1 = Object && Object.getOwnPropertyNames;
         if (d1 && d1(script).length !== 0) return false;
       
