@@ -31,7 +31,7 @@ function START() {
         // Check if setters exist
         const d1 = Object && Object.getOwnPropertyNames;
         if (d1 && d1(script).length !== 0) return false;
-
+      
         const d2 = Object && Object.getOwnPropertyDescriptors;
         if (d2 && Object.keys(d2(script)).length !== 0) return false;
 
@@ -55,7 +55,7 @@ function START() {
     }
 
     // Count is important, to make sure that we have checked all script tags without any errors
-    function isReplaced(scripts, count) {
+    function isProtected(scripts, count) {
         for (const script of scripts) {
             if (!checkElement(script)) return;
             count -= 1;
@@ -63,7 +63,14 @@ function START() {
         return count === 0;
     }
 
-    const replaced = isReplaced(scripts, 1);
-    console.log(replaced ? "✅ Nothing suspicious found!" : "⚠️ Original bundle code was replaced!!");
+    const protected = isProtected(scripts, 1);
+    const text = protected ? "✅ Nothing suspicious found!" : "⚠️ Original bundle code was replaced!!";
+  
+    const h1 = document.createElement("h1");
+    h1.className = protected ? "green" : "yellow";
+    h1.textContent = text;
+    document.body.appendChild(h1);
+
+    console.log(text);
 }
 START();
