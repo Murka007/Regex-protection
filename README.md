@@ -11,4 +11,4 @@ A practical example of how to protect your `<script>` element and bypass its pro
   ---------------
   - Download tampermonkey extension in your browser
   - Create a new userscript [#anti-regex-protection](./anti-regex-protection.js) in tampermonkey
-  - Open demo version: https://edrickennardyan.github.io/Regex-protection/
+  - Open demo version: https://murka007.github.io/Regex-protection/
