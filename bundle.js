@@ -22,7 +22,7 @@ function START() {
         if (script.tagName !== "SCRIPT") return false;
         if (!("src" in script)) return false;
 
-        // Make sure that nobody is using scriptElemet.innerHTML = code
+        // Make sure that nobody is using scriptElement.innerHTML = code
         const textTypes = ["innerHTML", "innerText", "outerText", "textContent"];
         for (const type of textTypes) {
             if (script[type] !== "" || script[type].length) return false;
