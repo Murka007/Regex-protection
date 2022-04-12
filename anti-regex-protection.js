@@ -72,7 +72,7 @@ function START() {
     const observer = new MutationObserver(function(mutations) {
         for (const mutation of mutations) {
             for (const node of mutation.addedNodes) {
-                if (node.tagName === "SCRIPT" && node.src.match(/index\.js$/)) {
+                if (node.tagName === "SCRIPT" && node.src.match(/bundle\.js$/)) {
                     observer.disconnect();
 
                     loadScript(mutation.target, node);
