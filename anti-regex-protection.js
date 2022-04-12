@@ -2,7 +2,7 @@
 // @name Bundle code replacer
 // @description  Modify the bundle code before it's execution
 // @version 0.1
-// @match https://edrickennardyan.github.io/Regex-protection/
+// @match https://murka007.github.io/Regex-protection/
 // @run-at document-start
 // @grant none
 // ==/UserScript==
