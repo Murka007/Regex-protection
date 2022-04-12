@@ -8,5 +8,5 @@ A practical example of how to protect your `<script>` element and bypass its pro
   How to test userscript
   ---------------
   - Download tampermonkey extension in your browser
-  - Create a new userscript [#anti-regex-protection.js](/../../tree/main) in tampermonkey
+  - Create a new userscript [#anti-regex-protection](./anti-regex-protection.js) in tampermonkey
   - Open demo version: 
